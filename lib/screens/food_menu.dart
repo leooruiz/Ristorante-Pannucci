@@ -9,13 +9,16 @@ class FoodMenu extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
-            child: Text(
-              'Menu',
-              style: TextStyle(
-                fontFamily: 'Caveat',
-                fontSize: 32,
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                'Menu',
+                style: TextStyle(
+                  fontFamily: 'Caveat',
+                  fontSize: 32,
+                ),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
             ),
           ),
           SliverList(delegate: SliverChildBuilderDelegate((context, index) {}))
