@@ -21,25 +21,30 @@ class FoodItem extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    itemTitle,
-                    style: const TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.w500),
-                  ),
-                  Text("R\$ $itemPrice"),
-                ],
+            Expanded(
+              flex: 5,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      itemTitle,
+                      style: const TextStyle(
+                          fontSize: 16, fontWeight: FontWeight.w500),
+                    ),
+                    Text("R\$ $itemPrice"),
+                  ],
+                ),
               ),
             ),
-            Image(
-              height: 80,
-              width: 80,
-              image: AssetImage(imageURI),
-              fit: BoxFit.cover,
+            Expanded(
+              flex: 2,
+              child: Image(
+                height: 80,
+                image: AssetImage(imageURI),
+                fit: BoxFit.cover,
+              ),
             ),
           ],
         ),
