@@ -12,9 +12,9 @@ class FoodMenu extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: CustomScrollView(
           slivers: [
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 16),
+                padding: EdgeInsets.only(bottom: 16),
                 child: Text(
                   'Menu',
                   style: TextStyle(

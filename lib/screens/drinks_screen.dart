@@ -11,9 +11,9 @@ class DrinkScreen extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
       child: CustomScrollView(
         slivers: <Widget>[
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 16),
+              padding: EdgeInsets.only(bottom: 16),
               child: Text(
                 'Bebidas',
                 textAlign: TextAlign.center,
@@ -29,7 +29,7 @@ class DrinkScreen extends StatelessWidget {
                   itemPrice: items[index]['price'],
                 );
               }, childCount: items.length),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 8,

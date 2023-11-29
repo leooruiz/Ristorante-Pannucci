@@ -7,7 +7,7 @@ class PaymentMethod extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -36,7 +36,7 @@ class PaymentMethod extends StatelessWidget {
               ),
             ],
           ),
-          Icon(
+          const Icon(
             Icons.arrow_forward_ios,
           ),
         ],

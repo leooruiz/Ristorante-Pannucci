@@ -29,9 +29,9 @@ class Checkout extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: CustomScrollView(
           slivers: [
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
                 child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Text(
                 'Pedido',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
@@ -44,24 +44,24 @@ class Checkout extends StatelessWidget {
                   itemTitle: items[index]['name'],
                   itemPrice: items[index]['price']);
             }, childCount: items.length)),
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
                 child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Text(
                 'Pagamento',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
               ),
             )),
-            SliverToBoxAdapter(child: PaymentMethod()),
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(child: PaymentMethod()),
+            const SliverToBoxAdapter(
                 child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0),
               child: Text(
                 'Confirmar',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
               ),
             )),
-            SliverToBoxAdapter(child: Expanded(child: PaymentTotal()))
+            const SliverToBoxAdapter(child: Expanded(child: PaymentTotal()))
           ],
         ),
       ),
